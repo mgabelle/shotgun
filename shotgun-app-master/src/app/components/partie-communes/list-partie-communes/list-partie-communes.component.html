@@ -1,0 +1,7 @@
+<span *ngFor="let partieCommune of partieCommuneShotguns">
+  <h2>Shotguns pour la partie commune {{ partieCommune.name }}</h2>
+  <p *ngIf="!partieCommune.listeShotguns || partieCommune.listeShotguns.length === 0">Ils n'en ont pas :(</p>
+  <span *ngIf="partieCommune.listeShotguns && partieCommune.listeShotguns.length > 0">
+    <app-shotguns [listeShotguns]="partieCommune.listeShotguns"></app-shotguns>
+  </span>
+</span>

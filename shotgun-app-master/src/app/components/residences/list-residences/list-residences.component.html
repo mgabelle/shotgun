@@ -1,0 +1,8 @@
+<span *ngFor="let residence of residencesShotguns">
+    <h2>Shotguns pour la residence {{ residence.name }}</h2>
+    <p *ngIf="!residence.listePartieCommune.listeShotguns || residence.listePartieCommune.listeShotguns.length === 0">Ils n'en ont pas :(</p> -->
+    <span *ngIf="residence.listePartieCommune.listeShotguns && residence.listePartieCommune.listeShotguns.length > 0">
+      <app-shotguns [listeShotguns]="residence.listePartieCommune.listeShotguns"></app-shotguns>
+    </span>
+  </span>
+  
